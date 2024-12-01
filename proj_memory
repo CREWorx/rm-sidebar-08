@@ -1,0 +1,125 @@
+# Project Memory: Shadcn Sidebar Project (v0.0.3)
+
+## Project Overview
+- Project Name: rm-sidebar-08
+- Current Version: v0.0.3
+- Stack:
+  - Next.js 15.0.3
+  - React 19 RC
+  - TypeScript
+  - Tailwind CSS
+  - Shadcn UI components
+  - next-themes (for theme management)
+
+## Project Structure and Components
+1. Core Components:
+   - Dashboard layout with responsive sidebar
+   - Theme-aware color system with dark mode support
+   - Shadcn UI integration
+   - Theme toggle with system preference support
+
+2. Key Files:
+   - `/src/app/dashboard/page.tsx`: Main dashboard page
+   - `/src/components/app-sidebar.tsx`: Primary sidebar component
+   - `/src/components/nav-*.tsx`: Navigation components
+   - `/src/components/ui/*.tsx`: Shadcn UI components
+   - `/src/components/providers.tsx`: Client-side theme provider
+   - `/src/components/theme-toggle.tsx`: Theme toggle component
+   - `/src/hooks/use-mobile.tsx`: Mobile detection hook
+   - `/src/lib/utils.ts`: Utility functions
+   - `/middleware.ts`: Supabase auth middleware
+
+## Development Environment
+- Development Server: localhost:3001
+- Build System: Turbopack
+- Git Repository: Initialized with key commits:
+  1. Latest: Theme toggle size adjustment
+  2. Dark mode implementation
+  3. 12c813b: "chore: bump version to v0.0.2"
+  4. 4e055e5: "Initial commit"
+  5. 9461e65: "Initial commit: v0.0.1"
+  6. dafc08e: "Initial commit from Create Next App"
+
+## Local Development Tools
+1. AgentTools Directory:
+   - `google_search.py`: Implemented Google search functionality
+   - `perplexity_search.py`: Placeholder for Perplexity search
+   Both files are local development tools, not tracked in git
+
+2. Configuration:
+   - `.windsurfrules`: Local configuration for Windsurf IDE tools
+   - `.gitignore`: Configured to exclude development-specific files
+
+## Current State
+1. Completed Features:
+   - Basic dashboard layout
+   - Responsive sidebar implementation
+   - Full dark mode implementation with next-themes
+   - Theme toggle with system preference support
+   - Basic navigation components
+
+2. Recent Dark Mode Implementation:
+   - Added next-themes package
+   - Created theme providers with hydration protection
+   - Implemented theme toggle with Light/Dark/System options
+   - Matched theme toggle size with dashboard trigger (h-7 w-7)
+   - Added middleware for Supabase auth compatibility
+
+3. Pending Tasks:
+   - Fine-tune theme transition animations
+   - Add theme-specific color palettes
+   - Dashboard layout enhancements
+
+## Development Guidelines
+1. Code Standards:
+   - Prioritize server components
+   - Ensure accessibility compliance
+   - Maintain type safety (TypeScript)
+   - Focus on performance optimization
+   - Prevent hydration mismatches
+
+2. Documentation Requirements:
+   - Plain English descriptions
+   - Technical documentation
+   - Version tracking in README and package.json
+
+## Recent Changes
+1. Version Management:
+   - Updated from v0.0.2 to v0.0.3
+   - Added dark mode support
+   - Theme toggle size adjustments
+
+2. Technical Updates:
+   - Added next-themes integration
+   - Created client-side providers
+   - Implemented hydration-safe components
+   - Added Supabase auth middleware
+
+## Next Steps
+1. Implementation Priorities:
+   - Fine-tune dark mode transitions
+   - Enhance theme-specific styling
+   - Review and enhance sidebar features
+
+2. Technical Considerations:
+   - Ensure responsive design across devices
+   - Maintain accessibility standards
+   - Keep performance optimization in focus
+   - Monitor for hydration issues
+
+## Notes for Next Agent
+1. Current Focus:
+   - Dark mode is implemented and functional
+   - Theme toggle matches dashboard trigger size
+   - Consider enhancing theme transitions
+
+2. Important Considerations:
+   - Project uses latest Next.js and React RC versions
+   - Shadcn UI components are core to the design
+   - Dark mode implementation uses next-themes
+   - Follow established TypeScript patterns
+
+3. Development Environment:
+   - Ensure hydration safety with client components
+   - Test theme changes across page reloads
+   - Verify system theme preference behavior
