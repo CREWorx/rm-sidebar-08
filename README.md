@@ -1,4 +1,4 @@
-# Shadcn Sidebar Project (v0.0.2)
+# Shadcn Sidebar Project (v0.0.3)
 
 A Next.js project featuring a customizable sidebar component built with Shadcn UI.
 
