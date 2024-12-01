@@ -1,0 +1,28 @@
+# Windsurf Agent Tool Usage
+
+## Tool Directory
+All tools are located in the "AgentTools" folder.
+
+## How to Use Tools
+When given a command like "google...", "run ...", "use tool ...", or "invoke ...", the agent should:
+1. Look for the tool in the "AgentTools" folder.
+2. Execute the Python script corresponding to the tool name.
+3. Pass any required input to the tool interactively or through command-line arguments.
+
+## Available Tools
+1. **Google Search Tool**
+   - File: `google_search.py`
+   - Description: Performs a Google search for the provided query and returns a limited number of results.
+   - Example Command:
+     ```
+     run google_search with query="Python tutorials" and num_results=5
+     ```
+   - Execution Steps:
+     - Prompt the user for `query` (search term).
+     - Prompt for `num_results` (default: 5).
+     - Output the top results as a list of URLs.
+
+## Notes
+- Ensure all tools in "AgentTools" output their results to the console (`stdout`).
+- Only Python files with a `main()` function are recognized as callable tools.
+- If a tool fails, provide the error message for debugging.

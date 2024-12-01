@@ -1,8 +1,8 @@
-# Project Memory: Shadcn Sidebar Project (v0.0.3)
+# Project Memory: Shadcn Sidebar Project (v0.0.4)
 
 ## Project Overview
 - Project Name: rm-sidebar-08
-- Current Version: v0.0.3
+- Current Version: v0.0.4
 - Stack:
   - Next.js 15.0.3
   - React 19 RC
@@ -88,24 +88,27 @@
    - Updated from v0.0.2 to v0.0.3
    - Added dark mode support
    - Theme toggle size adjustments
+   - Implemented bottom chat drawer
 
 2. Technical Updates:
    - Added next-themes integration
    - Created client-side providers
    - Implemented hydration-safe components
    - Added Supabase auth middleware
+   - Integrated Vaul for drawer animations
+   - Created centered chat drawer (60% width)
 
-## Next Steps
-1. Implementation Priorities:
-   - Fine-tune dark mode transitions
-   - Enhance theme-specific styling
-   - Review and enhance sidebar features
+## Current Development Focus
+1. Chat Drawer Implementation:
+   - Bottom-sliding drawer using Vaul
+   - 60% viewport width with max-width of 800px
+   - Centered positioning with smooth animations
+   - Floating action button trigger
+   - Chat interface layout structure
 
-2. Technical Considerations:
-   - Ensure responsive design across devices
-   - Maintain accessibility standards
-   - Keep performance optimization in focus
-   - Monitor for hydration issues
+2. Component Structure:
+   - `/src/components/ui/drawer.tsx`: Base drawer with Vaul integration
+   - `/src/components/chat-drawer.tsx`: Custom chat implementation
 
 ## Notes for Next Agent
 1. Current Focus:

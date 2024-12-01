@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Providers } from "@/components/providers";
 import { Header } from "@/components/header";
+import { ChatDrawer } from "@/components/chat-drawer";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -38,6 +39,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <ChatDrawer />
         </Providers>
       </body>
     </html>
