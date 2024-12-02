@@ -5,15 +5,48 @@ import { Header } from "@/components/header";
 import { ChatDrawer } from "@/components/chat-drawer";
 import "./globals.css";
 
+const euclidCircularB = localFont({
+  src: [
+    {
+      path: './fonts/Euclid Circular B Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Euclid Circular B Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Euclid Circular B Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Euclid Circular B SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Euclid Circular B Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-euclid',
+  display: 'swap',
+});
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
+  display: 'swap',
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
-  weight: "100 900",
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -27,10 +60,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={euclidCircularB.variable}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans`}>
         <Providers
           attribute="class"
           defaultTheme="system"

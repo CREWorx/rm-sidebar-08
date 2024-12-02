@@ -1,8 +1,8 @@
-# Project Memory: Shadcn Sidebar Project (v0.0.4)
+# Project Memory: Shadcn Sidebar Project (v0.0.5)
 
 ## Project Overview
 - Project Name: rm-sidebar-08
-- Current Version: v0.0.4
+- Current Version: v0.0.5
 - Stack:
   - Next.js 15.0.3
   - React 19 RC
@@ -17,9 +17,12 @@
    - Theme-aware color system with dark mode support
    - Shadcn UI integration
    - Theme toggle with system preference support
+   - Custom font implementation (Euclid Circular B with Geist fallback)
 
 2. Key Files:
    - `/src/app/dashboard/page.tsx`: Main dashboard page
+   - `/src/app/layout.tsx`: Root layout with font configuration
+   - `/src/app/fonts/`: Font files directory (Euclid Circular B, Geist)
    - `/src/components/app-sidebar.tsx`: Primary sidebar component
    - `/src/components/nav-*.tsx`: Navigation components
    - `/src/components/ui/*.tsx`: Shadcn UI components
@@ -29,16 +32,25 @@
    - `/src/lib/utils.ts`: Utility functions
    - `/middleware.ts`: Supabase auth middleware
 
+## Font System
+1. Primary Font: Euclid Circular B
+   - Weights: Light (300), Regular (400), Medium (500), SemiBold (600), Bold (700)
+   - Implemented as variable font with font-display: swap
+   - Available via 'font-sans' utility class
+
+2. Fallback Fonts:
+   - Geist Sans: Available via 'font-geist' utility class
+   - Geist Mono: Used for monospace text via 'font-mono'
+
 ## Development Environment
 - Development Server: localhost:3001
 - Build System: Turbopack
 - Git Repository: Initialized with key commits:
-  1. Latest: Theme toggle size adjustment
-  2. Dark mode implementation
-  3. 12c813b: "chore: bump version to v0.0.2"
-  4. 4e055e5: "Initial commit"
-  5. 9461e65: "Initial commit: v0.0.1"
-  6. dafc08e: "Initial commit from Create Next App"
+  1. Latest: Font system implementation (Euclid Circular B)
+  2. Theme toggle size adjustment
+  3. Dark mode implementation
+  4. Initial sidebar implementation
+  5. Project setup
 
 ## Local Development Tools
 1. AgentTools Directory:
@@ -57,13 +69,14 @@
    - Full dark mode implementation with next-themes
    - Theme toggle with system preference support
    - Basic navigation components
+   - Custom font system with Euclid Circular B
 
-2. Recent Dark Mode Implementation:
-   - Added next-themes package
-   - Created theme providers with hydration protection
-   - Implemented theme toggle with Light/Dark/System options
-   - Matched theme toggle size with dashboard trigger (h-7 w-7)
-   - Added middleware for Supabase auth compatibility
+2. Recent Font System Implementation:
+   - Added Euclid Circular B as primary font
+   - Maintained Geist Sans/Mono as fallback options
+   - Configured proper font loading with display: swap
+   - Updated Tailwind configuration for font families
+   - Removed hardcoded Arial font family
 
 3. Pending Tasks:
    - Fine-tune theme transition animations
@@ -85,44 +98,30 @@
 
 ## Recent Changes
 1. Version Management:
-   - Updated from v0.0.2 to v0.0.3
-   - Added dark mode support
-   - Theme toggle size adjustments
-   - Implemented bottom chat drawer
+   - Updated from v0.0.4 to v0.0.5
+   - Added Euclid Circular B font system
+   - Maintained Geist fonts as fallback
+   - Improved font loading with display: swap
 
 2. Technical Updates:
-   - Added next-themes integration
-   - Created client-side providers
-   - Implemented hydration-safe components
-   - Added Supabase auth middleware
-   - Integrated Vaul for drawer animations
-   - Created centered chat drawer (60% width)
-
-## Current Development Focus
-1. Chat Drawer Implementation:
-   - Bottom-sliding drawer using Vaul
-   - 60% viewport width with max-width of 800px
-   - Centered positioning with smooth animations
-   - Floating action button trigger
-   - Chat interface layout structure
-
-2. Component Structure:
-   - `/src/components/ui/drawer.tsx`: Base drawer with Vaul integration
-   - `/src/components/chat-drawer.tsx`: Custom chat implementation
+   - Implemented new font system
+   - Updated Tailwind configuration
+   - Removed hardcoded font families
+   - Optimized font loading strategy
 
 ## Notes for Next Agent
 1. Current Focus:
-   - Dark mode is implemented and functional
-   - Theme toggle matches dashboard trigger size
-   - Consider enhancing theme transitions
+   - Font system is implemented and functional
+   - Both Euclid and Geist fonts are available
+   - Consider adding more font weights if needed
 
 2. Important Considerations:
    - Project uses latest Next.js and React RC versions
-   - Shadcn UI components are core to the design
-   - Dark mode implementation uses next-themes
+   - Font files are stored in /src/app/fonts/
+   - Font loading uses display: swap for better UX
    - Follow established TypeScript patterns
 
 3. Development Environment:
-   - Ensure hydration safety with client components
-   - Test theme changes across page reloads
-   - Verify system theme preference behavior
+   - Ensure font loading across different devices
+   - Test font fallback scenarios
+   - Verify font weights in different contexts
